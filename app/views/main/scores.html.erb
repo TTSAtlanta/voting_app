@@ -1,0 +1,10 @@
+<h1>Scores</h1>
+
+<% @choices.each do |choice, count| %>
+	<h4><%= choice %></h4>
+	<h6><%= count %></h6>
+	<div class="progress">
+	  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: <%= ((count.to_f/@total)*100).round %>%">
+	  </div>
+	</div>
+<% end %>

@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <% if user.candidate_id != nil %> 
+    <p><%= user.name %> voted for: <%= user.candidate.name %></p>
+  <% end %>	
+<% end %>
